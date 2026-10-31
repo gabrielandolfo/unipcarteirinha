@@ -4,9 +4,17 @@
     {
       "src": "index.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "icon.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/(icon\.png|apple-touch-icon.*\.png|favicon\.ico)",
+      "dest": "/icon.png"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
